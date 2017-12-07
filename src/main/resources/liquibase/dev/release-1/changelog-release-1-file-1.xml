@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<author>ruslan</author>
+<comment>Удаление данных и sequence из таблиц </comment>
+-->
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+	<changeSet id="data-rus-1" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<comment>Delete data and sequence from table: dict_countries</comment>
+		<delete schemaName="apps"
+			tableName="dict_countries">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_countries_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-2" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_regions</comment>
+		<delete schemaName="apps"
+				tableName="dict_regions">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_regions_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-3" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_energy_nodes</comment>
+		<delete schemaName="apps"
+				tableName="dict_energy_nodes">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_energy_nodes_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-4" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_energy_source_types</comment>
+		<delete schemaName="apps"
+				tableName="dict_energy_source_types">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_energy_source_types_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-5" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_energy_zones</comment>
+		<delete schemaName="apps"
+				tableName="dict_energy_zones">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_energy_zones_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-6" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_metering_point_types</comment>
+		<delete schemaName="apps"
+				tableName="dict_metering_point_types">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_metering_point_types_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-7" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_metering_types</comment>
+		<delete schemaName="apps"
+				tableName="dict_metering_types">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_metering_types_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-8" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_units</comment>
+		<delete schemaName="apps"
+				tableName="dict_units">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_units_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-9" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_energy_districts</comment>
+		<delete schemaName="apps"
+				tableName="dict_energy_districts">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_energy_districts_s"/>
+	</changeSet>
+
+
+
+</databaseChangeLog>
