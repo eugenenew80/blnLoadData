@@ -90,6 +90,25 @@
 					  sequenceName="dict_energy_districts_s"/>
 	</changeSet>
 
+	<changeSet id="data-rus-10" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_organizations</comment>
+		<delete schemaName="apps"
+				tableName="dict_organizations">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_organizations_s"/>
+
+		<dropColumn columnName="name"
+					schemaName="apps"
+					tableName="dict_organizations"/>
+		<rollback>
+			<addColumn schemaName="apps"
+					   tableName="dict_organizations">
+				<column name="name" type="varchar(100)"/>
+			</addColumn>
+		</rollback>
+	</changeSet>
+
 
 
 </databaseChangeLog>
