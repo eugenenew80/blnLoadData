@@ -97,16 +97,33 @@
 		</delete>
 		<dropSequence schemaName="apps"
 					  sequenceName="dict_organizations_s"/>
+	</changeSet>
 
-		<dropColumn columnName="name"
-					schemaName="apps"
-					tableName="dict_organizations"/>
-		<rollback>
-			<addColumn schemaName="apps"
-					   tableName="dict_organizations">
-				<column name="name" type="varchar(100)"/>
-			</addColumn>
-		</rollback>
+	<changeSet id="data-rus-11" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_data_sources</comment>
+		<delete schemaName="apps"
+				tableName="dict_data_sources">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_data_sources_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-12" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_meter_types</comment>
+		<delete schemaName="apps"
+				tableName="dict_meter_types">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_meter_types"/>
+	</changeSet>
+
+	<changeSet id="data-rus-13" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_substations</comment>
+		<delete schemaName="apps"
+				tableName="dict_substations">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_substations"/>
 	</changeSet>
 
 
