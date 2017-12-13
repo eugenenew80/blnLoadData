@@ -725,7 +725,7 @@
 			<column name="start_date" type="DATE"/>
 			<column name="end_date" type="DATE"/>
 			<column name="metering_point_type_id" type="NUMERIC"/>
-			<column name="energy_object_type" type="NUMERIC"/>
+			<column name="energy_object_type" type="STRING"/>
 			<column name="energy_object_id" type="NUMERIC"/>
 			<column name="rated_voltage" type="NUMERIC"/>
 			<column name="accounting_type_id" type="NUMERIC"/>
