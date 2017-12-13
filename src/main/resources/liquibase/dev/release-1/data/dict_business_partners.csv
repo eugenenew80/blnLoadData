@@ -1,0 +1,21 @@
+id;short_name;name;bin;kbe;okpo;is_large_consumer;is_electricity_producer;is_energy_supply_organization;is_transmitting_organization;is_electricity_consumer;parent_business_partner_id
+1;Не известно;Требуется уточнить;000000000000;null;null;null;null;null;null;null;null
+2;"АО ""КТЖ""";"АО ""Казахстан Темир Жолы""";000000000000;null;null;null;null;null;null;1;null
+3;"АО ""KEGOC""";АО Казахстанская компания по управлению электрическими сетями KEGOC;970740000838;null;null;null;null;null;1;null;null
+4;"ТОО ""ИПМ""";"ТОО ""Индустриальный парк Металлургия-Металлообработка""";060740002041;null;40852768;null;null;null;null;1;null
+5;"РГП ""КиКС""";"РГП ""Канал имени Каныша Сатпаева""";000000000000;null;null;null;null;null;null;1;null
+6;"АО ""АЖК""";"АО ""Алатау Жары? Компаниясы""";000000000000;null;null;null;null;null;null;1;null
+7;"АО ""ВК РЭК""";"АО ""Восточно-Казахстанская Распределительная Энергетическая Компания""";000000000000;null;null;null;null;null;null;1;null
+8;АО ССГПО;"АО ""Соколовско-Сарбайское горно-обогатительное производственное объединение""";000000000000;null;null;null;null;null;null;1;null
+9;"АО ""Павлодарэнерго""";"АО ""Павлодарэнерго""";000000000000;null;null;null;1;null;null;null;null
+10;"ГКП ""Теплокоммунэнерго""";"ГКП ""Теплокоммунэнерго""";000000000000;null;null;null;1;null;null;null;null
+11;"АО""Алюминий Казахстана""";"АО""Алюминий Казахстана""";000000000000;null;null;null;1;null;null;null;null
+12;ТОО «УПНК-ПВ»;ТОО «УПНК-ПВ»;000000000000;null;null;null;1;null;null;1;null
+13;"АО ""Астана-Энергия""";"АО ""Астана-Энергия""";000000000000;null;null;null;1;null;null;null;null
+14;"ТОО ""Степногорская ТЭЦ""";"ТОО ""Степногорская ТЭЦ""";000000000000;null;null;null;1;null;null;null;null
+15;"АО ""СевКазЭнерго""";"АО ""СевКазЭнерго""";000000000000;null;null;null;1;null;null;null;null
+16;"ГКП ""КТЭК""";ГКП «Костанайская теплоэнергетическая компания» ;000000000000;null;null;null;1;null;null;null;null
+17;"ГКП ""АТЭК""";ГКП «Аркалыкская теплоэнергетическая компания» ;000000000000;null;null;null;1;null;null;null;null
+18;ОО AES Экибастуз;ОО AES Экибастуз;000000000000;null;null;null;1;null;null;null;null
+19;Акм.РЭК;Акмолинская РЭК;000000000000;null;null;null;null;1;null;1;null
+20;СК РЭК;Северо-Казахстанская РЭК;000000000000;null;null;null;null;1;null;1;null

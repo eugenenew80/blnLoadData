@@ -208,4 +208,17 @@
 		<dropSequence schemaName="apps"
 					  sequenceName="dict_metering_points_locations_s"/>
 	</changeSet>
+
+	<changeSet id="data-rus-23" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_business_partners</comment>
+		<delete schemaName="apps"
+				tableName="dict_business_partners">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_business_partners_s"/>
+	</changeSet>
+
+
+
+
 </databaseChangeLog>

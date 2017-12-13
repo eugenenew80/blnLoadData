@@ -1,0 +1,15 @@
+﻿id;name;MANUFACTURER;RATED_CURRENT1;RATED_CURRENT2;ACCURACY_CLASS;MIN_CURRENT;MAX_CURRENT
+1;SB 0.1;Фирма FAGET Faber en Getreuer B.V., Нидерланды;;;;;
+2;SB 0.8;Фирма FAGET Faber en Getreuer B.V., Нидерланды;;;;;
+3;SBL 0.8 H;Фирма FAGET Faber en Getreuer B.V., Нидерланды;;;;;
+4;CA 123;Фирма Electrotecnica Arteche Hermanos S.A., Испания;;;;;
+5;CA 245;Фирма Electrotecnica Arteche Hermanos S.A., Испания;;;;;
+6;CA 362;Фирма Electrotecnica Arteche Hermanos S.A., Испания;;;;;
+7;CA 525;Фирма Electrotecnica Arteche Hermanos S.A., Испания;;;;;
+8;CTH-123;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;
+9;CTH-110;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;
+10;CTH-123;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;
+11;CTH-124;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;
+12;CTH-245;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;
+13;CTH-500;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;
+14;CTH-550;"Фирма ""AREVA T&D Instrument Transformers"", Франция";;;;;

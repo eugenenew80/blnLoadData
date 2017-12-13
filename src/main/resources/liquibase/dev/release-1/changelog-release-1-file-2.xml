@@ -274,6 +274,7 @@
 				tableName="dict_organizations">
 
 			<column name="id" type="NUMERIC"/>
+			<column name="short_name" type="STRING"/>
 			<column name="name" type="STRING"/>
 			<column name="bin"	type="STRING"/>
 			<column name="org_type" type="STRING"/>
@@ -324,9 +325,9 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_meter_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
-				separator=";"
+				separator=';'
 				tableName="dict_meter_types">
 
 			<column name="id" type="NUMERIC"/>
@@ -411,12 +412,48 @@
 	</changeSet>
 
 	<changeSet id="load-rus-15" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_business_partners</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_business_partners.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_business_partners">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="short_name" type="STRING"/>
+			<column name="name" type="STRING"/>
+			<column name="bin" type="STRING"/>
+			<column name="kbe" type="STRING"/>
+			<column name="okpo" type="STRING"/>
+			<column name="is_large_consumer" type="NUMERIC"/>
+			<column name="is_electricity_producer" type="NUMERIC"/>
+			<column name="is_energy_supply_organization" type="NUMERIC"/>
+			<column name="is_transmitting_organization" type="NUMERIC"/>
+			<column name="is_electricity_consumer" type="NUMERIC"/>
+			<column name="parent_business_partner_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_business_partners" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_business_partners_s"
+				startValue="21"/>
+	</changeSet>
+
+	<changeSet id="load-rus-16" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_substations</comment>
 		<loadData
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_substations.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_substations">
@@ -445,7 +482,7 @@
 
 
 
-	<changeSet id="load-rus-16" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-17" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_accounting_types</comment>
 		<loadData
 				encoding="UTF-8"
@@ -471,19 +508,18 @@
 				startValue="3"/>
 	</changeSet>
 
-	<changeSet id="load-rus-17" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-18" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_banks</comment>
 		<loadData
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_banks.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_banks">
 
 			<column name="id" type="NUMERIC"/>
-			<column name="code" type="STRING"/>
 			<column name="bic" type="STRING"/>
 			<column name="name" type="STRING"/>
 			<column name="bin" type="STRING"/>
@@ -500,7 +536,7 @@
 				startValue="43"/>
 	</changeSet>
 
-	<changeSet id="load-rus-18" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-19" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: ecm_content_types</comment>
 		<loadData
 				encoding="UTF-8"
@@ -527,7 +563,7 @@
 				startValue="14"/>
 	</changeSet>
 
-	<changeSet id="load-rus-19" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-20" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_power_line_types</comment>
 		<loadData
 				encoding="UTF-8"
@@ -554,7 +590,7 @@
 				startValue="14"/>
 	</changeSet>
 
-	<changeSet id="load-rus-20" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-21" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_supported_languages</comment>
 		<loadData
 				encoding="UTF-8"
@@ -582,7 +618,7 @@
 	</changeSet>
 
 
-	<changeSet id="load-rus-21" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-22" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_phone_number_types</comment>
 		<loadData
 				encoding="UTF-8"
@@ -602,7 +638,7 @@
 		</rollback>
 
 	</changeSet>
-	<changeSet id="load-rus-22" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-23" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_energy_object_types</comment>
 		<loadData
 				encoding="UTF-8"
@@ -629,32 +665,117 @@
 				startValue="3"/>
 	</changeSet>
 
-	<changeSet id="load-rus-23" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Load demo data to table: dict_metering_points_locations</comment>
+	<changeSet id="load-rus-24" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_contact_types</comment>
 		<loadData
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
-				file="data/dict_metering_points_locations.csv"
-				quotchar="'"
+				file="data/dict_contact_types.csv"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
-				tableName="dict_metering_points_locations">
+				tableName="dict_contact_types">
 
-			<column name="id" type="NUMERIC"/>
 			<column name="code" type="STRING"/>
+			<column name="short_name" type="STRING"/>
 			<column name="name" type="STRING"/>
-			<column name="energy_object_type_id" type="NUMERIC"/>
-
 		</loadData>
 
 		<rollback>
-			<delete schemaName="apps" tableName="dict_metering_points_locations" />
+			<delete schemaName="apps" tableName="dict_contact_types" />
+		</rollback>
+	</changeSet>
+
+	<changeSet id="load-rus-25" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_organizations_types</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_organizations_types.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_organizations_types">
+
+			<column name="code" type="STRING"/>
+			<column name="name" type="STRING"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_organizations_types" />
+		</rollback>
+	</changeSet>
+
+	<changeSet id="load-rus-26" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_metering_points</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_metering_points.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_metering_points">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="code" type="STRING"/>
+			<column name="short_name" type="STRING"/>
+			<column name="external_code" type="STRING"/>
+			<column name="start_date" type="DATE"/>
+			<column name="end_date" type="DATE"/>
+			<column name="metering_point_type_id" type="NUMERIC"/>
+			<column name="energy_object_type" type="NUMERIC"/>
+			<column name="energy_object_id" type="NUMERIC"/>
+			<column name="rated_voltage" type="NUMERIC"/>
+			<column name="accounting_type_id" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_metering_points" />
 		</rollback>
 
 		<createSequence
 				incrementBy="1"
 				schemaName="apps"
-				sequenceName="dict_metering_points_locations_s"
-				startValue="3"/>
+				sequenceName="dict_metering_points_s"
+				startValue="5997"/>
 	</changeSet>
+
+	<changeSet id="load-rus-27" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_energy_sources</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_energy_sources.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_energy_sources">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="short_name" type="STRING"/>
+			<column name="name" type="STRING"/>
+			<column name="voltage_class_id" type="NUMERIC"/>
+			<column name="energy_source_type_id" type="NUMERIC"/>
+			<column name="installed_power" type="NUMERIC"/>
+			<column name="is_large_electricity_producer" type="NUMERIC"/>
+			<column name="address" type="STRING"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_energy_sources" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_energy_sources_s"
+				startValue="40"/>
+	</changeSet>
+
+
 </databaseChangeLog>
