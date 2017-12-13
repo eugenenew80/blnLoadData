@@ -15,7 +15,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_countries.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_countries">
@@ -42,7 +42,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_regions.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_regions">
@@ -61,7 +61,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_regions_s"
-				startValue="34"/>
+				startValue="45"/>
 	</changeSet>
 
 
@@ -71,7 +71,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_energy_nodes.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_energy_nodes">
@@ -99,7 +99,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_energy_source_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_energy_source_types">
@@ -118,7 +118,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_energy_source_types_s"
-				startValue="10"/>
+				startValue="12"/>
 	</changeSet>
 
 	<changeSet id="load-rus-5" logicalFilePath="path-independent" author="ruslan" context="postgres">
@@ -127,7 +127,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_energy_zones.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_energy_zones">
@@ -145,7 +145,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_energy_zones_s"
-				startValue="4"/>
+				startValue="5"/>
 	</changeSet>
 
 	<changeSet id="load-rus-6" logicalFilePath="path-independent" author="ruslan" context="postgres">
@@ -154,7 +154,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_metering_point_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_metering_point_types">
@@ -181,7 +181,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_metering_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_metering_types">
@@ -210,7 +210,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_units.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_units">
@@ -240,7 +240,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_energy_districts.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_energy_districts">
@@ -268,7 +268,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_organizations.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_organizations">
@@ -298,7 +298,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_data_sources.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_data_sources">
@@ -363,7 +363,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_voltage_classes.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_voltage_classes">
@@ -390,7 +390,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_substation_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_substation_types">
@@ -477,7 +477,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_substations_s"
-				startValue="104"/>
+				startValue="126"/>
 	</changeSet>
 
 
@@ -488,7 +488,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_accounting_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_accounting_types">
@@ -542,7 +542,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/ecm_content_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="ecm_content_types">
@@ -569,7 +569,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_power_line_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_power_line_types">
@@ -587,7 +587,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_power_line_types_s"
-				startValue="14"/>
+				startValue="5"/>
 	</changeSet>
 
 	<changeSet id="load-rus-21" logicalFilePath="path-independent" author="ruslan" context="postgres">
@@ -596,7 +596,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_supported_languages.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_supported_languages">
@@ -624,7 +624,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_phone_number_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_phone_number_types">
@@ -644,7 +644,7 @@
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
 				file="data/dict_energy_object_types.csv"
-				quotchar="'"
+				quotchar='"'
 				schemaName="apps"
 				separator=";"
 				tableName="dict_energy_object_types">
