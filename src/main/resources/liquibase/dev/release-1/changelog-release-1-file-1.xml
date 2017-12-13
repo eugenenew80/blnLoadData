@@ -227,6 +227,16 @@
 					  sequenceName="dict_metering_points_s"/>
 	</changeSet>
 
+	<changeSet id="data-rus-25" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_metering_points</comment>
+		<delete schemaName="apps"
+				tableName="dict_energy_sources">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_energy_sources_s"/>
+	</changeSet>
+
+
 
 
 </databaseChangeLog>
