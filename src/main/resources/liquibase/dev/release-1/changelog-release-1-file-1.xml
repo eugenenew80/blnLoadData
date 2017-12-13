@@ -219,12 +219,12 @@
 	</changeSet>
 
 	<changeSet id="data-rus-24" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_energy_sources</comment>
+		<comment>Delete data and sequence from table: dict_metering_points</comment>
 		<delete schemaName="apps"
-				tableName="dict_energy_sources">
+				tableName="dict_metering_points">
 		</delete>
 		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_sources_s"/>
+					  sequenceName="dict_metering_points_s"/>
 	</changeSet>
 
 
