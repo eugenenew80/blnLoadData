@@ -707,6 +707,40 @@
 	</changeSet>
 
 	<changeSet id="load-rus-26" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_energy_sources</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_energy_sources.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_energy_sources">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="short_name" type="STRING"/>
+			<column name="name" type="STRING"/>
+			<column name="voltage_class_id" type="NUMERIC"/>
+			<column name="energy_source_type_id" type="NUMERIC"/>
+			<column name="installed_power" type="NUMERIC"/>
+			<column name="is_large_electricity_producer" type="NUMERIC"/>
+			<column name="address" type="STRING"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_energy_sources" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_energy_sources_s"
+				startValue="40"/>
+	</changeSet>
+
+	<changeSet id="load-rus-27" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_metering_points</comment>
 		<loadData
 				encoding="UTF-8"
@@ -742,40 +776,5 @@
 				sequenceName="dict_metering_points_s"
 				startValue="5997"/>
 	</changeSet>
-
-	<changeSet id="load-rus-27" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Load demo data to table: dict_energy_sources</comment>
-		<loadData
-				encoding="UTF-8"
-				relativeToChangelogFile="true"
-				file="data/dict_energy_sources.csv"
-				quotchar='"'
-				schemaName="apps"
-				separator=";"
-				tableName="dict_energy_sources">
-
-			<column name="id" type="NUMERIC"/>
-			<column name="short_name" type="STRING"/>
-			<column name="name" type="STRING"/>
-			<column name="voltage_class_id" type="NUMERIC"/>
-			<column name="energy_source_type_id" type="NUMERIC"/>
-			<column name="installed_power" type="NUMERIC"/>
-			<column name="is_large_electricity_producer" type="NUMERIC"/>
-			<column name="address" type="STRING"/>
-			<column name="business_partner_id" type="NUMERIC"/>
-			<column name="org_id" type="NUMERIC"/>
-		</loadData>
-
-		<rollback>
-			<delete schemaName="apps" tableName="dict_energy_sources" />
-		</rollback>
-
-		<createSequence
-				incrementBy="1"
-				schemaName="apps"
-				sequenceName="dict_energy_sources_s"
-				startValue="40"/>
-	</changeSet>
-
 
 </databaseChangeLog>
