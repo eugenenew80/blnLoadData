@@ -1,43 +1,103 @@
-id;bic;name;bin;parent_bank_id
-1;EABRKZKA;АО «Евразийский банк развития»;000000000000;null
-2;EXKAKZKA;АО «ЭКСИМБАНК КАЗАХСТАН»;000000000000;null
-3;HCSKKZKA;АО «Жилстройсбербанк Казахстана»;000000000000;null
-4;HLALKZKZ;АО «Исламский Банк «Al Hilal»;000000000000;null
-5;DVKAKZKA;АО «Банк Развития Казахстана»;000000000000;null
-6;ICBKKZKX;АО «Торгово-промышленный Банк Китая в г. Алматы»;000000000000;null
-7;INEARUMM;г. Москва Межгосударственный Банк;000000000000;null
-8;KICEKZKX;АО «Казахстанская фондовая биржа»;000000000000;null
-9;KISCKZKX;РГП «Казахстанский центр межбанковских расчетов НБРК»;000000000000;null
-10;KKMFKZ2A;ГУ «Комитет казначейства Министерства финансов РК»;000000000000;null
-11;KMGCKZKA;АО «Ипотечная организация «Казахстанская Ипотечная Компания»;000000000000;null
-12;KZIBKZKA;АО «ДБ «КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК»;000000000000;null
-13;NBPAKZKA;АО ДБ «Национальный Банк Пакистана» в Казахстане;000000000000;null
-14;NBRKKZKX;ГУ Национальный Банк РК;000000000000;null
-15;NPCKKZKA;АО «Национальный процессинговый центр»;000000000000;null
-16;SHBKKZKA;АО «Шинхан Банк Казахстан»;000000000000;null
-17;TBKBKZKA;АО ДБ «ТАИБ КАЗАХСКИЙ БАНК»;000000000000;null
-18;ZAJSKZ22;АО «Заман-Банк»;000000000000;null
-19;KZKOKZKX;АО «КАЗКОММЕРЦБАНК»;000000000000;null
-20;HSBKKZKX;АО «Народный Банк Казахстана»;000000000000;null
-21;ALMNKZKA;АО «АТФБанк»;951140000151;null
-22;CASPKZKA;АО «KASPI BANK»;000000000000;null
-23;KCJBKZKX;АО «Банк ЦентрКредит»;000000000000;null
-24;ALFAKZKA;АО «ДОЧЕРНИЙ БАНК «АЛЬФА-БАНК»;000000000000;null
-25;EURIKZKA;АО «Евразийский Банк»;000000000000;null
-26;INLMKZKA;АО «Хоум Кредит Банк»;000000000000;null
-27;IRTYKZKA;АО «ForteBank»;000000000000;null
-28;SENIKZKA;АО «Qazaq Banki»;000000000000;null
-29;KAZSKZKA;АО «Казинвестбанк»;000000000000;null
-30;CITIKZKA;АО «Ситибанк Казахстан»;000000000000;null
-31;KINCKZKA;АО «Bank RBK»;000000000000;null
-32;KPSTKZKA;АО «КАЗПОЧТА»;000000000000;null
-33;KSNVKZKA;АО «Банк Kassa Nova»;000000000000;null
-34;ASFBKZKA;АО Банк Астаны;000000000000;null
-35;LARIKZKA;АО “AsiaCredit Bank (АзияКредит Банк)”;000000000000;null
-36;NFBAKZ23;АО «Delta Bank»;000000000000;null
-37;NURSKZKX;АО «Нурбанк»;000000000000;null
-38;SABRKZKA;ДБ АО «Сбербанк России»;000000000000;null
-39;TSESKZKA;АО «Цеснабанк»;000000000000;null
-40;VTBAKZKZ;Дочерняя организация АО Банк ВТБ (Казахстан);000000000000;null
-41;ATYNKZKA;АО «Altyn Bank» (ДБ АО «Народный Банк Казахстана»);000000000000;null
-42;DEMIKZKA;АО «БанкПозитив Казахстан (ДБ Банка Апоалим Б.М.)»;000000000000;null
+﻿id;bic;name;bin;parent_bank_id
+1;ABKZKZKX;"АО ""БТА Банк""";null;null
+2;ABNAKZKX;"АО ДБ ""RBS (Kazakhstan)""";null;null
+3;ADCBAEAA;Abu Dhabi Commercial Bank;null;null
+4;ALFAKZKA;"АО ""ДОЧЕРНИЙ БАНК ""АЛЬФА-БАНК""";null;null
+5;ALMNKZKA;"АО ""АТФБанк""";951140000151;null
+6;ASBKUZ22;ASAKA BANK Avtotransport branch;null;null
+7;ASFBKZKA;АО Банк Астаны;null;null
+8;ATYNKZKA;"АО ""Altyn Bank"" (ДБ АО ""Народный Банк Казахстана"")";null;null
+9;BARCGB22;Barclays Bank;null;null
+10;BCYPCY2N;Bank of Cyprus Ltd, International Business Unit;null;null
+11;BKAUATWW;Bank Austria Creditanstalt, Vienna;null;null
+12;BKCHKZKA;"АО ДБ ""БАНК КИТАЯ В КАЗАХСТАНЕ""";null;null
+13;BLICRUMM;"ООО ""Эйч-эс-би-си Банк(РР)"" г.Москва";null;null
+14;BOFSGB2S;BANK OF SCOTLAND;null;null
+15;BSUIFRPPXXX;CREDIT AGRICOLE CIB;null;null
+16;CABRKZKA;"ЗАО""ЦЕНТР-АЗИАТСКИЙ БАНК СОТР.И РАЗВИТИЯ""";null;null
+17;CASPKZKA;"АО ""KASPI BANK""";null;null
+18;CBVILT2X;SEB bankasGedimino;null;null
+19;CCFRFRPP;Banque HSBC;null;null
+20;CEDUKZKA;"АО ""ЦЕНТРАЛЬНЫЙ ДЕПОЗИТАРИЙ ЦЕННЫХ БУМАГ""";null;null
+21;CHASUS33;JP Morgan Chase Bank, New York;null;null
+22;CIBHHUHB;CIB Bank Rt;null;null
+23;CITIKZKA;"АО ""Ситибанк Казахстан""";null;null
+24;CITIRUMX;"ZAO KB ""CITIBANK""";null;null
+25;CITIUS33XXX;CITIBANK NEW YORK;null;null
+26;COBADEFF600;Commerzbank AG;null;null
+27;DABNKZ2P;"КФ АО ""Дочерний банк "" Punjab National Bank"" - Казахстан""";null;null
+28;DEKRUA22;PJSC UniCredit Bank;null;null
+29;DEMIKZKA;"АО ""БанкПозитив Казахстан (ДБ Банка Апоалим Б.М.)""";null;null
+30;DEUTDEBBXX;Berlin Deutsche Bank AG;null;null
+31;DEUTDEDBBER;Deutsche Bank Privat- und Geschaftskunden AG;null;null
+32;DEUTDEFF;Deutsche Bank AG, Frankfurt am Main;null;null
+33;DEUTDEMM760;Deutsche Bank AG, Nurnberg;null;null
+34;DVKAKZKA;"АО ""Банк Развития Казахстана""";null;null
+35;EABRKZKA;"АО ""Евразийский банк развития""";null;null
+36;EBRDGB2L;EBRD, London;null;null
+37;ENEJKG22;Optima Bank;null;null
+38;EURIKZKA;"АО ""Евразийский Банк""";null;null
+39;EXBSUAUXZAP;JSC THE STATE EXPORT-IMPORT BANK OF UKRAINE;null;null
+40;EXKAKZKA;"АО ""ЭКСИМБАНК КАЗАХСТАН""";null;null
+41;FOBAKZKA;"АО ""ForteBank""";null;null
+42;GCVPKZ2A;"НАО ""Государственная корпорация ""Правительство для граждан""";null;null
+43;GEBABEBB36A;BNP PARIBAS - FORTIS BANK;null;null
+44;GOPZPLPW;BGZ BNP Paribas;null;null
+45;HCSKKZKA;"АО ""Жилстройсбербанк Казахстана""";null;null
+46;HLALKZKZ;"АО ""Исламский Банк ""Al Hilal""";null;null
+47;HSBKKZKX;"АО ""Народный Банк Казахстана""";null;null
+48;IBRDUS33XXX;IBRD, Washington;null;null
+49;ICBKKZKX;"АО ""Торгово-промышленный Банк Китая в г. Алматы""";null;null
+50;INEARUMM;г. Москва Межгосударственный Банк;null;null
+51;INLMKZKA;"АО ""Хоум Кредит Банк""";null;null
+52;IRTYKZKA;"АО ""ForteBank""";null;null
+53;IRTYKZRA;"Филиал АО ""Альянс Банк"" г.Шымкент";null;null
+54;IRVTUS3N;Bank of New York Mellon;null;null
+55;JSRBKZKA;"АО ""ТЕМІРБАНК""";null;null
+56;KAZSKZKA;"АО ""Казинвестбанк""";null;null
+57;KCJBKZKX;"АО ""Банк ЦентрКредит""";null;null
+58;KICEKZKX;"АО ""Казахстанская фондовая биржа""";null;null
+59;KINCKZKA;"АО ""Bank RBK""";null;null
+60;KINCRZKA;"АО ""КазИнКомБанк""";null;null
+61;KISCKZKX;"РГП ""Казахстанский центр межбанковских расчетов НБРК""";null;null
+62;KKMFKZ2A;"ГУ ""Комитет казначейства Министерства финансов РК""";null;null
+63;KMGCKZKA;"АО ""Ипотечная организация ""Казахстанская Ипотечная Компания""";null;null
+64;KPSTKZKA;"АО ""КАЗПОЧТА""";null;null
+65;KSNVKZKA;"АО ""Банк Kassa Nova""";null;null
+66;KZIBKZKA;"АО ""ДБ ""КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК""";null;null
+67;KZKOKZKX;"АО ""КАЗКОММЕРЦБАНК""";null;null
+68;LARIKZKA;АО “AsiaCredit Bank (АзияКредит Банк)”;null;null
+69;MEOKKZKA;"АО ""МЕТРОКОМБАНК""";null;null
+70;MIDLGB22;HSBC, London;null;null
+71;MIFCUAUK;JSC ProCredit Bank;null;null
+72;MNSBKG22;"CJSC ""Manas Bank""";null;null
+73;MRMDUS33;HSBK Bank Canada, Montreal;null;null
+74;MSRBKZKA;"АО ""Мастербанк""";null;null
+75;NBPAKZKA;"АО ДБ ""Национальный Банк Пакистана"" в Казахстане";null;null
+76;NBRKKZKX;ГУ Национальный Банк РК;null;null
+77;NFBAKZ23;"АО ""Delta Bank""";null;null
+78;NPCKKZKA;"АО ""Национальный процессинговый центр""";null;null
+79;NURSKZKX;"АО ""Нурбанк""";null;null
+80;NWBKGB2L;National Westminster Bank;null;null
+81;PBANUA2X;Privatbank;null;null
+82;RLNWATWW;Raiffeisenlandesbank NO-Wien AG;null;null
+83;RSBNRUMM;ROSBANK;null;null
+84;RSLBRUMM;Russky Slaviansky Bank;null;null
+85;RZBAATWW;RAIFFEISEN ZENTRALBANK OESTERREICH AG, VIENNA;null;null
+86;SABRKZKA;"ДБ АО ""Сбербанк России""";null;null
+87;SABRRUMM;Savings bank of the Russian Federation;null;null
+88;SCBLHKHHXXX;STANDARD CHARTERED BANK;null;null
+89;SENIKZKA;"АО ""Qazaq Banki""";null;null
+90;SHBKKZKA;"АО ""Шинхан Банк Казахстан""";null;null
+91;SNTRUS3A;Suntrust Bank, New-York;null;null
+92;TBKBKZKA;АО Capital Bank Kazakhstan;920140000143;null
+93;TNGRKZKX;"АО ""Tengri Bank""";null;null
+94;TSESKZKA;"АО ""Цеснабанк""";null;null
+95;UBSWCHZH;UBS;null;null
+96;UJSIUZ22;Узпромстройбанк;null;null
+97;UZHOU22;AKIB IPOTEKA-BANK;null;null
+98;VTBAKZKZ;Дочерняя организация АО Банк ВТБ (Казахстан);null;null
+99;VTBRRUMM;JSC VTB Bank;null;null
+100;ZABAHR2X;Zagrebacka Banka, Zagreb;null;null
+101;ZAJSKZ22;"АО ""Заман-Банк""";null;null
+102;КСJBKZKX;"АО ""Банк ЦентрКредит""";null;null

@@ -444,7 +444,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_business_partners_s"
-				startValue="21"/>
+				startValue="4051"/>
 	</changeSet>
 
 	<changeSet id="load-rus-16" logicalFilePath="path-independent" author="ruslan" context="postgres">
@@ -533,7 +533,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_banks_s"
-				startValue="43"/>
+				startValue="103"/>
 	</changeSet>
 
 	<changeSet id="load-rus-19" logicalFilePath="path-independent" author="ruslan" context="postgres">
