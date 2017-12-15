@@ -1,5 +1,5 @@
-﻿code;name
-CHIEF;Первый руководитель
-CHIEF_ENGINEER;Главный инженер
-CHIEF_ACCOUNTANT;Главный бухгалтер
-OTHER;другой
+﻿code;name;short_name
+CHIEF;Первый руководитель;Первый руководитель
+CHIEF_ENGINEER;Главный инженер;Главный инженер
+CHIEF_ACCOUNTANT;Главный бухгалтер;Главный бухгалтер
+OTHER;другой;другой
