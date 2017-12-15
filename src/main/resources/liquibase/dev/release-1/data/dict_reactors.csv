@@ -1,1 +1,80 @@
 ﻿id;name;delta_pr;unom;business_partner_id;energy_object_type;energy_object_id;org_id
+1;1Р-500 Л-5071 ПС-500кВ ЦГПП;null;null;1;SUBSTATION;8;3
+2;2Р-500 Л-5050 ПС-500кВ ЦГПП;null;null;1;SUBSTATION;null;3
+3;Р-1 ПС-220кВ Макинская;null;null;1;SUBSTATION;null;3
+4;Реактор шунтирующий 1Р-500 Л-5071 ПС-500кВ ЕГПП;null;null;1;SUBSTATION;null;3
+5;1Р-500 Л-5071 ПС-500кВ ЕГПП;null;null;1;SUBSTATION;null;3
+6;2Р-500 Л-5086 ПС-500кВ ЕГПП;null;null;1;SUBSTATION;null;3
+7;Реактор шунтирующий 3Р-500 ПС-500кВ ЕГПП;null;null;1;SUBSTATION;null;3
+8;Р-1-220 ПС-220кВ АГПП;null;null;1;SUBSTATION;null;3
+9;РК-1 Р-1-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+10;РК-1 Р-2-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+11;РК-1 Р-3-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+12;РК-2 Р-1-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+13;РК-2 Р-2-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+14;РК-2 Р-3-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+15;Р-1-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+16;Р-1-500 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+17;Р-2-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+18;Р-2-500 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+19;Р-3-1150 ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+20;Р-4-1150 ф.А ПС-1150кВ Кокшетауская;null;null;1;SUBSTATION;null;3
+21;Р-1 Л-5561 ПС-500кВ Аврора;null;null;1;SUBSTATION;null;3
+22;Р-2 Л-5191 ПС-500кВ Аврора;null;null;1;SUBSTATION;null;3
+23;Р-1 ПС-220кВ Куйбышевская;null;null;1;SUBSTATION;null;3
+24;Реактор шунтирующий РТМ-100000 кВар ПС 220 Уральская;null;null;1;SUBSTATION;null;4
+25;Реактор шунтирующий РТМ 50000/220 ПС-500 кВ Степная;null;null;1;SUBSTATION;null;4
+26;"Реактор шунтирующий 1Р ПС 500 кВ ""Ульке""";null;null;1;SUBSTATION;null;4
+27;"Реактор шунтирующий 2Р ПС 500 кВ ""Ульке""";null;null;1;SUBSTATION;null;4
+28;Р-1 ПС 500 кВ Алматы;null;null;1;SUBSTATION;null;5
+29;Р-2 ПС 500 кВ Алматы;null;null;1;SUBSTATION;null;5
+30;Р-1 ПС 500 кВ ЮКГРЭС;null;null;1;SUBSTATION;null;5
+31;Р-2 ПС 500 кВ ЮкГРЭС;null;null;1;SUBSTATION;null;5
+32;Р-3 ПС 500 кВ ЮкГРЭС;null;null;1;SUBSTATION;null;5
+33;Р-4 ПС 500 кВ ЮкГРЭС;null;null;1;SUBSTATION;null;5
+34;Р-5 ПС 500 кВ ЮкГРЭС;null;null;1;SUBSTATION;null;5
+35;Реактор шунтирующий Р1 ПС152;null;null;1;SUBSTATION;null;5
+36;Реактор Р-1;null;null;1;SUBSTATION;null;5
+37;Шунтирующий реактор Р-1 ПС-500кВ Алматы-500;null;null;1;SUBSTATION;null;5
+38;Шунтирующий реактор Р-2 ПС-500кВ Алматы-500;null;null;1;SUBSTATION;null;5
+39;Шунтирующий реактор Р-5370 ПС 500кВ Семей;null;null;1;SUBSTATION;null;6
+40;Шунтирующий реактор Р-5384 ПС 500кВ Семей;null;null;1;SUBSTATION;null;6
+41;Управляемый шунтирующий реактор УШР ПС 500кВ Семей;null;null;1;SUBSTATION;null;6
+42;"Реактор шунтирующий Р-1 ПС-220кВ ""Атырау""";null;null;1;SUBSTATION;null;7
+43;"Реактор шунтирующий Р-3 ПС-220кВ ""Тенгиз""";null;null;1;SUBSTATION;null;7
+44;"Реактор шунтирующий Р-1 ПС-220кВ Бейнеу""";null;null;1;SUBSTATION;null;7
+45;"Реактор шунтирующий Р-2 ПС-220кВ Бейнеу""";null;null;1;SUBSTATION;null;7
+46;"Реактор шунтирующий Р-3 ПС-220кВ Бейнеу""";null;null;1;SUBSTATION;null;7
+47;Р-1 Л-5726 ПС-500кВ Сокол;null;null;1;SUBSTATION;null;8
+48;Р-2 Л-5086 ПС-500кВ Сокол;null;null;1;SUBSTATION;null;8
+49;Р-1 ПС-220кВ Восточная;null;null;1;SUBSTATION;null;8
+50;Р-2 ПС-220кВ Восточная;null;null;1;SUBSTATION;null;8
+51;Р-1 Л-1103 ПС-1150кВ Костанайская;null;null;1;SUBSTATION;null;8
+52;Р-2 Л-1102 ПС-1150кВ Костанайская;null;null;1;SUBSTATION;null;8
+53;КР-1 ПС-500кВ Житикара;null;null;1;SUBSTATION;null;8
+54;Р-1-110 ПС 500 кВ Житикара;null;null;1;SUBSTATION;null;8
+55;Р-1Л-5740 ПС-500кВ Житикара;null;null;1;SUBSTATION;null;8
+56;Шунтирующий реактор Р-1 ПС 1150кВ Экибастузская;null;null;1;SUBSTATION;null;9
+57;Шунтирующий реактор Р-1101-1150 ПС 1150кВ Экибастузская;null;null;1;SUBSTATION;null;9
+58;Шунтирующий реактор Р-1104-1150 ПС 1150кВ Экибастузская;null;null;1;SUBSTATION;null;9
+59;Шунтирующий реакторР-1104-500 ПС 1150кВ Экибастузская;null;null;1;SUBSTATION;null;9
+60;Шунтирующий реакторР-5170 ПС 1150кВ Экибастузская;null;null;1;SUBSTATION;null;9
+61;Шунтирующий реактор Р-5370 ПС 1150кВ Экибастузская;null;null;1;SUBSTATION;null;9
+62;Р-8 СШ-35кВ ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+63;Р-1 Л-5138 ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+64;Р-2 Л-5170 ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+65;Р-3 Л-5300 ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+66;Р-4 Л-5170 ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+67;Р-5 Л-5320 ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+68;Р-6 2СШ-500кВ ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+69;Р-7 1СШ-500кВ ПС-500кВ Агадырь;null;null;1;SUBSTATION;null;10
+70;Реактор шунтирующий Р1-110КВ ПС-220кВ Балхашская;null;null;1;SUBSTATION;null;10
+71;Р-1 фА ПС-500кВ Жезказган;null;null;1;SUBSTATION;null;10
+72;Р-1 ПС-220кВ Кумколь;null;null;1;SUBSTATION;null;10
+73;Р-2 ПС-220кВ Кумколь;null;null;1;SUBSTATION;null;10
+74;Р-1 ПС-500кВ Нура;null;null;1;SUBSTATION;null;10
+75;Реактор Р-1 ПС-220кВ Кентау;null;null;1;SUBSTATION;null;11
+76;Реактор Р-1 ПС-220кВ Кызылорда;null;null;1;SUBSTATION;null;11
+77;Реактор Р-2 ПС-220кВ Кызылорда;null;null;1;SUBSTATION;null;11
+78;Реактор Р-1 ПС 500 кВ Жамбыл;null;null;1;SUBSTATION;null;11
+79;Реактор Р-2 ПС 500 кВ Жамбыл;null;null;1;SUBSTATION;null;11

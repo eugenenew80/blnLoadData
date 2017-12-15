@@ -808,7 +808,7 @@
 				startValue="79"/>
 	</changeSet>
 
-	<changeSet id="load-rus-28" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-29" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_voltage_trans_types</comment>
 		<loadData
 				encoding="UTF-8"
