@@ -1,5 +1,5 @@
-﻿id;code;name
-1;CHIEF;Первый руководитель
-2;CHIEF_ENGINEER;Главный инженер
-3;CHIEF_ACCOUNTANT;Главный бухгалтер
-4;OTHER;другой
+﻿code;name
+CHIEF;Первый руководитель
+CHIEF_ENGINEER;Главный инженер
+CHIEF_ACCOUNTANT;Главный бухгалтер
+OTHER;другой
