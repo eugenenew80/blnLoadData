@@ -1,4 +1,4 @@
-﻿id;name;manufacturer;rated_voltage1;rated_current2;accuracy_class
+﻿id;name;manufacturer;rated_voltage1;rated_voltage2;accuracy_class
 1;CCV 110;Введите значение;null;null;null
 2;CCV 123;Введите значение;null;null;null
 3;CCV 245;Введите значение;null;null;null
