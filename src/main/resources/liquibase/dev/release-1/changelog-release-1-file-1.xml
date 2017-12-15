@@ -236,6 +236,23 @@
 					  sequenceName="dict_energy_sources_s"/>
 	</changeSet>
 
+	<changeSet id="data-rus-26" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_reactors</comment>
+		<delete schemaName="apps"
+				tableName="dict_reactors">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_reactors_s"/>
+	</changeSet>
+
+	<changeSet id="data-rus-27" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_voltage_trans_types</comment>
+		<delete schemaName="apps"
+				tableName="dict_voltage_trans_types">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_voltage_trans_types_s"/>
+	</changeSet>
 
 
 

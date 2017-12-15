@@ -1,6 +1,6 @@
-code;name
-work;рабочий
-mobile;мобильный
-home;домашний
-fax;факс
-other;другое
+﻿id;code;name
+1;work;рабочий
+2;mobile;мобильный
+3;home;домашний
+4;fax;факс
+5;other;другое

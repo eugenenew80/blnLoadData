@@ -444,7 +444,7 @@
 				incrementBy="1"
 				schemaName="apps"
 				sequenceName="dict_business_partners_s"
-				startValue="4051"/>
+				startValue="19"/>
 	</changeSet>
 
 	<changeSet id="load-rus-16" logicalFilePath="path-independent" author="ruslan" context="postgres">
@@ -775,6 +775,69 @@
 				schemaName="apps"
 				sequenceName="dict_metering_points_s"
 				startValue="5997"/>
+	</changeSet>
+
+	<changeSet id="load-rus-28" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_reactors</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_reactors.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_reactors">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="delta_pr" type="NUMERIC"/>
+			<column name="unom" type="NUMERIC"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+			<column name="energy_object_id" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_reactors" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_reactors_s"
+				startValue="79"/>
+	</changeSet>
+
+	<changeSet id="load-rus-28" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_voltage_trans_types</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_voltage_trans_types.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_voltage_trans_types">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="manufacturer" type="STRING"/>
+			<column name="rated_voltage1" type="NUMERIC"/>
+			<column name="rated_current2" type="NUMERIC"/>
+			<column name="accuracy_class" type="NUMERIC"/>
+			<column name="min_current" type="NUMERIC"/>
+			<column name="max_current" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_voltage_trans_types" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_voltage_trans_types_s"
+				startValue="58"/>
 	</changeSet>
 
 </databaseChangeLog>

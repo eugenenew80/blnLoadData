@@ -1,6 +1,6 @@
-code;name
-HEAD;головная
-BRANCH;филиал
-AFFILIATED;дочерняя
-DEPARTMENT;департамент
-OTHER;другой
+п»їid;code;name
+1;HEAD;РіРѕР»РѕРІРЅР°СЏ
+2;BRANCH;С„РёР»РёР°Р»
+3;AFFILIATED;РґРѕС‡РµСЂРЅСЏСЏ
+4;DEPARTMENT;РґРµРїР°СЂС‚Р°РјРµРЅС‚
+5;OTHER;РґСЂСѓРіРѕР№
