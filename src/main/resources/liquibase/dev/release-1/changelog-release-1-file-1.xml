@@ -254,6 +254,15 @@
 					  sequenceName="dict_voltage_trans_types_s"/>
 	</changeSet>
 
+	<changeSet id="data-rus-28" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_power_transformers</comment>
+		<delete schemaName="apps"
+				tableName="dict_power_transformers">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_power_transformers_s"/>
+	</changeSet>
+
 
 
 </databaseChangeLog>
