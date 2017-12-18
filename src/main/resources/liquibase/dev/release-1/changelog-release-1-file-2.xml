@@ -873,7 +873,7 @@
 				startValue="538"/>
 	</changeSet>
 
-	<changeSet id="load-rus-28" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-31" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: dict_reactors</comment>
 		<loadData
 				encoding="UTF-8"
