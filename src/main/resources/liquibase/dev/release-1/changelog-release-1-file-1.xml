@@ -263,13 +263,14 @@
 					  sequenceName="dict_power_transformers_s"/>
 	</changeSet>
 
-
 	<changeSet id="data-rus-29" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_reactors</comment>
+		<comment>Delete data and sequence from table: info_types_by_contract</comment>
 		<delete schemaName="apps"
-				tableName="dict_reactors">
+				tableName="info_types_by_contract">
 		</delete>
 		<dropSequence schemaName="apps"
-					  sequenceName="dict_reactors_s"/>
+					  sequenceName="info_types_by_contract_s"/>
 	</changeSet>
+
+
 </databaseChangeLog>
