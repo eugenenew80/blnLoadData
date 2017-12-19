@@ -168,7 +168,7 @@
 		</loadData>
 
 		<rollback>
-			<delete schemaName="apps" tableName="dict_power_lines_parts" />
+			<delete schemaName="apps" tableName="dict_power_line_parts" />
 		</rollback>
 
 		<createSequence
