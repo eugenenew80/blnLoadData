@@ -149,15 +149,15 @@
 
 
 	<changeSet id="load-rus-38" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Load demo data to table: dict_power_lines_parts</comment>
+		<comment>Load demo data to table: dict_power_line_parts</comment>
 		<loadData
 				encoding="UTF-8"
 				relativeToChangelogFile="true"
-				file="data/dict_power_lines_parts.csv"
+				file="data/dict_power_line_parts.csv"
 				quotchar='"'
 				schemaName="apps"
 				separator=";"
-				tableName="dict_power_lines_parts">
+				tableName="dict_power_line_parts">
 
 			<column name="id" type="NUMERIC"/>
 			<column name="power_line_id" type="NUMERIC"/>
@@ -174,7 +174,7 @@
 		<createSequence
 				incrementBy="1"
 				schemaName="apps"
-				sequenceName="dict_power_lines_parts_S"
+				sequenceName="dict_power_line_parts_s"
 				startValue="782"/>
 		<rollback/>
 	</changeSet>
