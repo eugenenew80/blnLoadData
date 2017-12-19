@@ -138,12 +138,12 @@
 	</changeSet>
 
 	<changeSet id="data-rus-37" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_power_lines_parts</comment>
+		<comment>Delete data and sequence from table: dict_power_line_parts</comment>
 		<delete schemaName="apps"
-				tableName="dict_power_lines_parts">
+				tableName="dict_power_line_parts">
 		</delete>
 		<dropSequence schemaName="apps"
-					  sequenceName="dict_power_lines_parts_s"/>
+					  sequenceName="dict_power_line_parts_s"/>
 		<rollback/>
 	</changeSet>
 
