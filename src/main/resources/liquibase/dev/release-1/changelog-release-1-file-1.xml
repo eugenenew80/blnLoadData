@@ -271,6 +271,7 @@
 		</delete>
 		<dropSequence schemaName="apps"
 					  sequenceName="dict_reactors_s"/>
+		<rollback/>
 	</changeSet>
 
 
