@@ -55,7 +55,7 @@
 	</changeSet>
 
 
-	<changeSet id="data-rus-32" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="data-rus-33" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Delete data and sequence from table: info_types_by_contract</comment>
 		<delete schemaName="apps"
 				tableName="info_types_by_contract">
@@ -66,7 +66,7 @@
 	</changeSet>
 
 
-	<changeSet id="load-rus-32" logicalFilePath="path-independent" author="ruslan" context="postgres">
+	<changeSet id="load-rus-34" logicalFilePath="path-independent" author="ruslan" context="postgres">
 		<comment>Load demo data to table: info_types_by_contract</comment>
 		<loadData
 				encoding="UTF-8"
@@ -91,6 +91,91 @@
 				schemaName="apps"
 				sequenceName="info_types_by_contract_s"
 				startValue="13"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="data-rus-35" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_power_lines</comment>
+		<delete schemaName="apps"
+				tableName="dict_power_lines">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_power_lines_s"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="load-rus-36" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_power_lines</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_power_lines.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_power_lines">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="code" type="STRING"/>
+			<column name="name" type="STRING"/>
+			<column name="power_line_type_id" type="NUMERIC"/>
+			<column name="length" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_power_lines" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_power_lines_s"
+				startValue="781"/>
+		<rollback/>
+	</changeSet>
+
+	<changeSet id="data-rus-37" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_power_lines_parts</comment>
+		<delete schemaName="apps"
+				tableName="dict_power_lines_parts">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_power_lines_parts_s"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="load-rus-38" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_power_lines_parts</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_power_lines_parts.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_power_lines_parts">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="power_line_id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+			<column name="length" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_power_lines_parts" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_power_lines_parts_S"
+				startValue="782"/>
 		<rollback/>
 	</changeSet>
 
