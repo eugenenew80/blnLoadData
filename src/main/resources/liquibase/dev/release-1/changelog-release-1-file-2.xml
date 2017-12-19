@@ -902,6 +902,7 @@
 				schemaName="apps"
 				sequenceName="dict_reactors_s"
 				startValue="79"/>
+		<rollback/>
 	</changeSet>
 
 
