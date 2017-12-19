@@ -264,4 +264,14 @@
 	</changeSet>
 
 
+	<changeSet id="data-rus-29" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_reactors</comment>
+		<delete schemaName="apps"
+				tableName="dict_reactors">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_reactors_s"/>
+	</changeSet>
+
+
 </databaseChangeLog>
