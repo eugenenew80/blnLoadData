@@ -905,32 +905,4 @@
 	</changeSet>
 
 
-	<changeSet id="load-rus-32" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Load demo data to table: info_types_by_contract</comment>
-		<loadData
-				encoding="UTF-8"
-				relativeToChangelogFile="true"
-				file="data/info_types_by_contract.csv"
-				quotchar='"'
-				schemaName="apps"
-				separator=";"
-				tableName="info_types_by_contract">
-
-			<column name="id" type="NUMERIC"/>
-			<column name="short_name" type="STRING"/>
-			<column name="name" type="STRING"/>
-		</loadData>
-
-		<rollback>
-			<delete schemaName="apps" tableName="info_types_by_contract" />
-		</rollback>
-
-		<createSequence
-				incrementBy="1"
-				schemaName="apps"
-				sequenceName="dict_reactors_s"
-				startValue="13"/>
-	</changeSet>
-
-
 </databaseChangeLog>
