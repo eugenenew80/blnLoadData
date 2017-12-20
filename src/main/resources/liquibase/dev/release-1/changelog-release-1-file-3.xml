@@ -180,4 +180,200 @@
 	</changeSet>
 
 
+
+	<changeSet id="data-rus-39" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_meters</comment>
+		<delete schemaName="apps"
+				tableName="dict_meters">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_meters_s"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="load-rus-40" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_meters</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_meters.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_meters">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="serial_number" type="STRING"/>
+			<column name="name" type="STRING"/>
+			<column name="manufacturer" type="STRING"/>
+			<column name="rated_current" type="NUMERIC"/>
+			<column name="rated_voltage" type="NUMERIC"/>
+			<column name="accuracy_class" type="NUMERIC"/>
+			<column name="minimum_load" type="NUMERIC"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+			<column name="last_verification_date" type="TIMESTAMP"/>
+			<column name="next_verification_date" type="TIMESTAMP"/>
+			<column name="total_digits_number" type="NUMERIC"/>
+			<column name="digits_after_decimal_point" type="NUMERIC"/>
+			<column name="is_parameter_ap" type="NUMERIC"/>
+			<column name="is_parameter_am" type="NUMERIC"/>
+			<column name="is_parameter_rp" type="NUMERIC"/>
+			<column name="is_parameter_rm" type="NUMERIC"/>
+			<column name="is_withdrawn" type="NUMERIC"/>
+			<column name="org_id" type="NUMERIC"/>
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_meters" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_meters_s"
+				startValue="2238"/>
+		<rollback/>
+	</changeSet>
+
+
+
+
+	<changeSet id="data-rus-41" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_metering_point_meters</comment>
+		<delete schemaName="apps"
+				tableName="dict_metering_point_meters">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_metering_point_meters_s"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="load-rus-42" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_metering_point_meters</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_metering_point_meters.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_metering_point_meters">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="metering_point_id" type="NUMERIC"/>
+			<column name="meter_id" type="NUMERIC"/>
+
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_metering_point_meters" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_metering_point_meters_s"
+				startValue="2238"/>
+		<rollback/>
+	</changeSet>
+
+
+
+	<changeSet id="data-rus-43" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_metering_point_voltage_trans</comment>
+		<delete schemaName="apps"
+				tableName="dict_metering_point_voltage_trans">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_metering_point_voltage_trans_s"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="load-rus-44" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_metering_point_voltage_trans</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_metering_point_voltage_trans.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_metering_point_voltage_trans">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="metering_point_id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="manufacturer" type="STRING"/>
+			<column name="rated_voltage1" type="NUMERIC"/>
+			<column name="rated_voltage2" type="NUMERIC"/>
+			<column name="accuracy_class" type="NUMERIC"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_metering_point_voltage_trans" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_metering_point_voltage_trans_s"
+				startValue="1975"/>
+		<rollback/>
+	</changeSet>
+
+
+
+	<changeSet id="data-rus-45" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Delete data and sequence from table: dict_metering_point_current_trans</comment>
+		<delete schemaName="apps"
+				tableName="dict_metering_point_current_trans">
+		</delete>
+		<dropSequence schemaName="apps"
+					  sequenceName="dict_metering_point_current_trans_s"/>
+		<rollback/>
+	</changeSet>
+
+
+	<changeSet id="load-rus-46" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<comment>Load demo data to table: dict_metering_point_current_trans</comment>
+		<loadData
+				encoding="UTF-8"
+				relativeToChangelogFile="true"
+				file="data/dict_metering_point_current_trans.csv"
+				quotchar='"'
+				schemaName="apps"
+				separator=";"
+				tableName="dict_metering_point_current_trans">
+
+			<column name="id" type="NUMERIC"/>
+			<column name="metering_point_id" type="NUMERIC"/>
+			<column name="name" type="STRING"/>
+			<column name="manufacturer" type="STRING"/>
+			<column name="rated_current1" type="NUMERIC"/>
+			<column name="rated_current2" type="NUMERIC"/>
+			<column name="accuracy_class" type="NUMERIC"/>
+			<column name="min_current" type="NUMERIC"/>
+			<column name="max_current" type="NUMERIC"/>
+			<column name="business_partner_id" type="NUMERIC"/>
+
+		</loadData>
+
+		<rollback>
+			<delete schemaName="apps" tableName="dict_metering_point_current_trans" />
+		</rollback>
+
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="dict_metering_point_current_trans_s"
+				startValue="1975"/>
+		<rollback/>
+	</changeSet>
+
+
 </databaseChangeLog>
