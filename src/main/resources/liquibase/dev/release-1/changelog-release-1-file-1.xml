@@ -1,269 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-<author>ruslan</author>
-<comment>Удаление данных и sequence из таблиц </comment>
--->
 <databaseChangeLog
 		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
 
-	<changeSet id="data-rus-1" logicalFilePath="path-independent" author="ruslan" context="postgres">
-	<comment>Delete data and sequence from table: dict_countries</comment>
-		<delete schemaName="apps"
-			tableName="dict_countries">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_countries_s"/>
+	<changeSet id="lq-rus-1" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>add column to mdfem_history</comment>
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="doc_type_code" type="varchar2(30)" remarks="Тип документа"/>
+		</addColumn>
 	</changeSet>
 
-	<changeSet id="data-rus-2" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_regions</comment>
-		<delete schemaName="apps"
-				tableName="dict_regions">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_regions_s"/>
+	<changeSet id="lq-rus-2" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>Creating foreign constraint: mdfem_history to dm_doc_types</comment>
+		<addForeignKeyConstraint
+				baseTableSchemaName="apps"
+				baseTableName="mdfem_history"
+				baseColumnNames="doc_type_code"
+				constraintName="fk_mdfem_history_8"
+				deferrable="true"
+				initiallyDeferred="true"
+				onDelete="RESTRICT"
+				onUpdate="RESTRICT"
+				referencedTableSchemaName="apps"
+				referencedTableName="dm_doc_types"
+				referencedColumnNames="code"
+		/>
 	</changeSet>
 
-	<changeSet id="data-rus-3" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_energy_nodes</comment>
-		<delete schemaName="apps"
-				tableName="dict_energy_nodes">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_nodes_s"/>
+	<changeSet id="lq-rus-3" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment> Add comments to the columns mdfem_history</comment>
+		<sql dbms="postgres, oracle" endDelimiter=";" splitStatements="true" stripComments="true">
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.act_doc_number
+			is 'Внутренний номер документа';
+		</sql>
+		<rollback/>
 	</changeSet>
 
-	<changeSet id="data-rus-4" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_energy_source_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_energy_source_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_source_types_s"/>
+	<changeSet id="lq-rus-4" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>add column to mdfem_history</comment>
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ext_doc_number" type="varchar2(50)" remarks="Внешний номер документа"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="tt_verification_date" type="date" remarks="Дата последней поверки ТТ"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="tn_verification_date" type="date" remarks="Дата последней поверки ТН"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="removed_seals" type="varchar2(200)" remarks="Снятые пломбы"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="installed_seals" type="varchar2(200)" remarks="Установленые пломбы"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ua" type="number" remarks="Напряжение фазы А, В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ub" type="number" remarks="Напряжение фазы B, В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="uc" type="number" remarks="Напряжение фазы C, В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="IA" type="number" remarks="Ток фазы А, А"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="IB" type="number" remarks="Ток фазы B, А"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="IC" type="number" remarks="Ток фазы C, А"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ANGLE_UAA" type="number" remarks="Угол между напряжениями фаз А и А, В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ANGLE_UAB" type="number" remarks="Угол между напряжениями фаз А и В, В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ANGLE_UAC" type="number" remarks="Угол между напряжениями фаз А и С, В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ANGLE_UIA" type="varchar2(10)" remarks="Угол между фазными током и напряжением фазы А"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ANGLE_UIB" type="varchar2(10)" remarks="Угол между фазными током и напряжением фазы В"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="ANGLE_UIC" type="varchar2(10)" remarks="Угол между фазными током и напряжением фазы С"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="CONNECTION_IS_CORRECT" type="number" remarks="Признак Схема 'ПУ соответствует требованиям учета эл.энергии'"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="detected_violations" type="varchar2(400)" remarks="Выявленные нарушения"/>
+		</addColumn>
+
+		<addColumn schemaName="apps"
+				   tableName="mdfem_history">
+			<column name="NOTES" type="varchar2(400)" remarks="Предписание/Примечание/Рекомендации"/>
+		</addColumn>
 	</changeSet>
 
-	<changeSet id="data-rus-5" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_energy_zones</comment>
-		<delete schemaName="apps"
-				tableName="dict_energy_zones">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_zones_s"/>
+	<changeSet id="lq-rus-5" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>Add comments to the columns mdfem_history</comment>
+		<sql dbms="postgres, oracle" endDelimiter=";" splitStatements="true" stripComments="true">
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.ACT_DATE
+			is 'Дата документа';
+
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.IS_IN_LOADS
+			is 'При выполнении работ произошло нарушение учета';
+
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.COUNT_OF_UNDER_HEADERS
+			is 'Количество экземпляров документа';
+
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.TN_TYPE_ID
+			is 'Ид трансформатора напряжения';
+
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.TRANSFORM_FACTOR
+			is 'Коэффициент трансформации тока и напряжения';
+
+			-- Add comments to the columns
+			comment on column APPS.MDFEM_HISTORY.METER_FACTOR
+			is 'Множитель, запрограммированный в счетчике';
+		</sql>
+		<rollback/>
 	</changeSet>
 
-	<changeSet id="data-rus-6" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_metering_point_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_metering_point_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_metering_point_types_s"/>
+	<changeSet id="lq-rus-6" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>Creating table: mdfem_history_tl</comment>
+		<createTable tableName="mdfem_history_tl" remarks="Справочник Приборы учета электрической энергии в точках учета Перевод" schemaName="apps">
+			<column name="id" type="number" remarks="Ид">
+				<constraints nullable="false"/>
+			</column>
+
+			<column name="lang" type="varchar2(10)" remarks="Язык">
+				<constraints nullable="false"/>
+			</column>
+
+			<column name="mdfem_history_id" type="number" remarks="Ссылка на родительскую запись">
+				<constraints nullable="false"/>
+			</column>
+
+			<column name="doc_signing_place" type="varchar2(100)" remarks="Место составления">
+				<constraints nullable="true"/>
+			</column>
+
+			<column name="doc_reason" type="varchar2(300)" remarks="Причина составления документа">
+				<constraints nullable="true"/>
+			</column>
+
+			<column name="create_date" type="TIMESTAMP" remarks="Дата создания">
+				<constraints nullable="true"/>
+			</column>
+
+			<column name="last_update_date" type="TIMESTAMP" remarks="Дата обновления">
+				<constraints nullable="true"/>
+			</column>
+
+			<column name="create_by" type="number" remarks="Автор">
+				<constraints nullable="true"/>
+			</column>
+
+			<column name="last_update_by" type="number" remarks="Автор обновления">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
 	</changeSet>
 
-	<changeSet id="data-rus-7" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_metering_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_metering_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_metering_types_s"/>
+	<changeSet id="lq-rus-7" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>Creating primary key for table: mdfem_history_tl</comment>
+		<addPrimaryKey
+				columnNames="id"
+				constraintName="pk_mdfem_history_tl"
+				schemaName="apps"
+				tableName="mdfem_history_tl"/>
 	</changeSet>
 
-	<changeSet id="data-rus-8" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_units</comment>
-		<delete schemaName="apps"
-				tableName="dict_units">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_units_s"/>
+	<changeSet id="lq-rus-8" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>Creating sequence for table: mdfem_history_tl</comment>
+		<createSequence
+				incrementBy="1"
+				schemaName="apps"
+				sequenceName="mdfem_history_tl_s"
+				startValue="1"/>
 	</changeSet>
 
-	<changeSet id="data-rus-9" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_energy_districts</comment>
-		<delete schemaName="apps"
-				tableName="dict_energy_districts">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_districts_s"/>
+	<changeSet id="lq-rus-9" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>creating unique constraint for table: mdfem_history_tl</comment>
+		<addUniqueConstraint
+				constraintName="un_mdfem_history_tl_1"
+				schemaName="apps"
+				tableName="mdfem_history_tl"
+				columnNames="mdfem_history_id, lang"
+				deferrable="true"
+				initiallyDeferred="true"
+		/>
 	</changeSet>
 
-	<changeSet id="data-rus-10" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_organizations</comment>
-		<delete schemaName="apps"
-				tableName="dict_organizations">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_organizations_s"/>
+	<changeSet id="lq-rus-10" logicalFilePath="path-independent" author="ruslan" context="dev">
+		<comment>Creating foreign constraint: mdfem_history_tl to mdfem_history</comment>
+		<addForeignKeyConstraint
+				baseTableSchemaName="apps"
+				baseTableName="mdfem_history_tl"
+				baseColumnNames="mdfem_history_id"
+				constraintName="fk_mdfem_history_tl_1"
+				deferrable="true"
+				initiallyDeferred="true"
+				onDelete="CASCADE"
+				onUpdate="RESTRICT"
+				referencedTableSchemaName="apps"
+				referencedTableName="mdfem_history"
+				referencedColumnNames="id"
+		/>
 	</changeSet>
-
-	<changeSet id="data-rus-11" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_data_sources</comment>
-		<delete schemaName="apps"
-				tableName="dict_data_sources">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_data_sources_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-12" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_meter_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_meter_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_meter_types_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-13" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_voltage_classes</comment>
-		<delete schemaName="apps"
-				tableName="dict_voltage_classes">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_voltage_classes_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-14" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_substations</comment>
-		<delete schemaName="apps"
-				tableName="dict_substations">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_substations_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-15" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_substation_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_substation_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_substation_types_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-16" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_accounting_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_accounting_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_accounting_types_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-17" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_banks</comment>
-		<delete schemaName="apps"
-				tableName="dict_banks">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_banks_s"/>
-	</changeSet>
-
-
-	<changeSet id="data-rus-18" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: ecm_content_types</comment>
-		<delete schemaName="apps"
-				tableName="ecm_content_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="ecm_content_types_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-19" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_power_line_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_power_line_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_power_line_types_s"/>
-	</changeSet>
-
-
-	<changeSet id="data-rus-20" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_supported_languages</comment>
-		<delete schemaName="apps"
-				tableName="dict_supported_languages">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_supported_languages_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-21" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_energy_object_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_energy_object_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_object_types_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-22" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_metering_points_locations</comment>
-		<delete schemaName="apps"
-				tableName="dict_metering_points_locations">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_metering_points_locations_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-23" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_business_partners</comment>
-		<delete schemaName="apps"
-				tableName="dict_business_partners">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_business_partners_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-24" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_metering_points</comment>
-		<delete schemaName="apps"
-				tableName="dict_metering_points">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_metering_points_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-25" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_metering_points</comment>
-		<delete schemaName="apps"
-				tableName="dict_energy_sources">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_energy_sources_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-26" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_reactors</comment>
-		<delete schemaName="apps"
-				tableName="dict_reactors">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_reactors_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-27" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_voltage_trans_types</comment>
-		<delete schemaName="apps"
-				tableName="dict_voltage_trans_types">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_voltage_trans_types_s"/>
-	</changeSet>
-
-	<changeSet id="data-rus-28" logicalFilePath="path-independent" author="ruslan" context="postgres">
-		<comment>Delete data and sequence from table: dict_power_transformers</comment>
-		<delete schemaName="apps"
-				tableName="dict_power_transformers">
-		</delete>
-		<dropSequence schemaName="apps"
-					  sequenceName="dict_power_transformers_s"/>
-	</changeSet>
-
-
 
 
 </databaseChangeLog>
